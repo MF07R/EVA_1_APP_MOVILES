@@ -1,11 +1,39 @@
 import { StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
 import { Text, View } from '@/components/Themed';
+import { router } from 'expo-router';
+import { useState } from 'react';
 
 
 export default function LoginScreen() {
-    
-    
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+
+    const handleEmailChange = (text: string) => {
+        setEmail(text);
+    }
+
+    const handlePasswordChange = (text: string) => {
+        setPassword(text);
+    }
+
+    const handleLogin = () => {
+        if(password !== "1234") {
+            setError("contraseña invalida, intente de nuevo");
+            return
+        }
+
+        setError("");
+
+        router.push({
+            pathname: "/(tabs)",
+            params: {email}
+        })
+    }
+      
+
+
     return (
         <View style={styles.container}> 
         <Text>Login Screen</Text>
@@ -14,18 +42,24 @@ export default function LoginScreen() {
             placeholder="Email"
             keyboardType="email-address"
             autoCapitalize="none"
+            value={email}
+            onChangeText={handleEmailChange}
             style={styles.input}
         />
         
         <TextInput
             placeholder="Password"
             secureTextEntry
+            value={password}
+            onChangeText={handlePasswordChange}
             style={styles.input}
         />
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={handleLogin}>
             <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
+
+        {error ? <Text style={{ color: "red", marginTop: 10}}>{error}</Text> : null}
 
         </View>
     )
