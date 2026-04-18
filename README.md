@@ -35,12 +35,14 @@ un sistema de login simulado en el cual:
 * el email se pasa como parametro a otras pantallas usando useLocalSearchParams
 
 
+
+
 # Estructura del proyecto
 
 /app
 ....../(tabs)
    ............index.tsx -------> Pantalla Home
-    ............profile.tsx ------>Pantalla Perfil
+   ............profile.tsx ------>Pantalla Perfil
    .......... _layout.tsx ------>Configuración de tabs
   index.tsx ----------->Login
   _layout.tsx --------->Navegación principal
@@ -49,6 +51,10 @@ un sistema de login simulado en el cual:
 /components
 /constants
 /assets
+
+
+
+
 
 
 # Instalacion y ejecucion
@@ -88,7 +94,5 @@ este proyecto utiliza yarn como gestor de paquetes
 - si contraseña es erronea --> mensaje de error
 
 ### Autora
-
-Maria Fernanda Rojas
 
 Maria Fernanda Rojas
