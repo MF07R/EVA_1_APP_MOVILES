@@ -1,4 +1,4 @@
-#Login App  con React Native
+# Login App  con React Native
 
 aplicacion movil desarrollada con React Native + Expo que implementa un sistema basico de autenticacion con navegacion entre pantallas.
 
@@ -8,7 +8,7 @@ este proyecto fue creado con fines educativos para practicar:
 - paso de parametros entre pantallas
 - uso de hooks en React Native
 
-##caracteristicas
+## caracteristicas
 
 * pantalla de login con validacion
 * navegacion con Expo Router
@@ -18,13 +18,13 @@ este proyecto fue creado con fines educativos para practicar:
 * manejo de errores en el login
 
 
-##tecnologias utilizadas
+## tecnologias utilizadas
 
 * Reac Native
 * Expo Router
 * TypeScript
 
-#Logica de autenticacion
+# Logica de autenticacion
 
 un sistema de login simulado en el cual: 
 
@@ -35,7 +35,7 @@ un sistema de login simulado en el cual:
 * el email se pasa como parametro a otras pantallas usando useLocalSearchParams
 
 
-#Estructura del proyecto
+# Estructura del proyecto
 
 /app
 ....../(tabs)
@@ -51,7 +51,7 @@ un sistema de login simulado en el cual:
 /assets
 
 
-#Instalacion y ejecucion
+# Instalacion y ejecucion
 
 este proyecto utiliza yarn como gestor de paquetes
 
@@ -87,6 +87,8 @@ este proyecto utiliza yarn como gestor de paquetes
 - puede navegar entre home y profile
 - si contraseña es erronea --> mensaje de error
 
-###Autora
+### Autora
+
+Maria Fernanda Rojas
 
 Maria Fernanda Rojas
